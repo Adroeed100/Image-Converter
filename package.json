@@ -1,0 +1,15 @@
+{
+  "name": "img2jpg",
+  "version": "1.0.0",
+  "description": "Image gets converted either to jpg or jpeg",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^37.1.0",
+    "sharp": "^0.34.2"
+  }
+}

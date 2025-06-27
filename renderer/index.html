@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Converter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #0f0f0f, #1f1f1f);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .glass-container {
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 30px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            text-shadow: 0 0 5px #00ffe1;
+        }
+
+        button, select {
+            margin: 10px 0;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            background: #222;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 255, 200, 0.2);
+        }
+
+        button:hover, select:hover {
+            background: #333;
+            box-shadow: 0 0 15px rgba(0, 255, 200, 0.6);
+        }
+
+        select {
+            width: 100%;
+        }
+
+        #status {
+            margin-top: 20px;
+            color: #00ffe1;
+            font-size: 14px;
+            word-wrap: break-word;
+        }
+
+        @media (max-width: 480px) {
+            .glass-container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            button, select {
+                font-size: 14px;
+                padding: 10px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="glass-container">
+        <h1>Image Format Converter</h1>
+        <button id="selectBtn">Select Image</button>
+        <select id="format">
+            <option value="jpeg">JPEG (.jpeg)</option>
+            <option value="png">PNG (.png)</option>
+            <option value="webp">WEBP (.webp)</option>
+            <option value="tiff">TIFF (.tiff)</option>
+            <option value="avif">AVIF (.avif)</option>
+            <option value="heif">HEIF (.heif)</option>
+        </select>
+        <button id="convertBtn">Convert</button>
+        <div id="status"></div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
